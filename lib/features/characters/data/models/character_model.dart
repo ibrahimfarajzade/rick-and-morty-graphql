@@ -1,4 +1,4 @@
-import 'package:rick_and_morty_characters/domain/entities/character.dart';
+import 'package:rick_and_morty_characters/features/characters/domain/entities/character.dart';
 
 class CharacterModel extends Character {
   const CharacterModel({required super.name, required super.image});

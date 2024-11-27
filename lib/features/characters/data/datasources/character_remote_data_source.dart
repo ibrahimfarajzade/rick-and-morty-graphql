@@ -1,4 +1,4 @@
-import 'package:rick_and_morty_characters/data/models/character_model.dart';
+import 'package:rick_and_morty_characters/features/characters/data/models/character_model.dart';
 import 'package:rick_and_morty_characters/qraphql/queries.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 

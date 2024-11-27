@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:rick_and_morty_characters/core/locator/locator_registrant.dart';
-import 'domain/usecases/get_characters.dart';
-import 'presentation/bloc/character_bloc.dart';
-import 'presentation/screens/character_screen.dart';
+import 'features/characters/domain/usecases/get_characters.dart';
+import 'features/characters/presentation/bloc/character_bloc.dart';
+import 'features/characters/presentation/screens/character_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

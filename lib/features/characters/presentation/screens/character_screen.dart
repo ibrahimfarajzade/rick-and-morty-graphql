@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rick_and_morty_characters/domain/entities/character.dart';
-import 'package:rick_and_morty_characters/presentation/bloc/character_bloc.dart';
-import 'package:rick_and_morty_characters/presentation/bloc/character_event.dart';
-import 'package:rick_and_morty_characters/presentation/bloc/character_state.dart';
-import 'package:rick_and_morty_characters/presentation/widgets/character_card.dart';
+import 'package:rick_and_morty_characters/features/characters/domain/entities/character.dart';
+import 'package:rick_and_morty_characters/features/characters/presentation/bloc/character_bloc.dart';
+import 'package:rick_and_morty_characters/features/characters/presentation/bloc/character_event.dart';
+import 'package:rick_and_morty_characters/features/characters/presentation/bloc/character_state.dart';
+import 'package:rick_and_morty_characters/features/characters/presentation/widgets/character_card.dart';
 
 class CharacterScreen extends StatelessWidget {
   const CharacterScreen({super.key});
@@ -41,14 +41,20 @@ class CharacterScreen extends StatelessWidget {
       ),
       body: BlocBuilder<CharacterBloc, CharacterState>(
         builder: (context, state) {
-          if (state is CharacterLoading) const Center(child: CircularProgressIndicator());
+          if (state is CharacterLoading) {
+            return const Center(child: CircularProgressIndicator());
+          }
 
           if (state is CharacterLoaded) {
-            if (state.characters.isEmpty) const Center(child: Text('No characters found.'));
+            if (state.characters.isEmpty) {
+              return const Center(child: Text('No characters found.'));
+            }
             return _buildCharacterList(state.characters, context);
           }
 
-          if (state is CharacterError) _buildError();
+          if (state is CharacterError) {
+            return _buildError();
+          }
 
           return const Center(
             child: Text(
