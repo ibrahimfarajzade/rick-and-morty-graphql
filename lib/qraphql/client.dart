@@ -1,15 +1,15 @@
-import 'package:flutter/foundation.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 
 class GraphQLConfig {
-  static final HttpLink httpLink = HttpLink('https://tmdb.sandbox.zoosh.ie/dev');
+  static final HttpLink httpLink = HttpLink('https://rickandmortyapi.com/graphql');
 
-  static ValueNotifier<GraphQLClient> initializeClient() {
+  // Return a GraphQLClient directly
+  static GraphQLClient initializeClient() {
     final client = GraphQLClient(
       link: httpLink,
-      cache: GraphQLCache(store: InMemoryStore()),
+      cache: GraphQLCache(store: HiveStore()),
     );
 
-    return ValueNotifier(client);
+    return client;
   }
 }
