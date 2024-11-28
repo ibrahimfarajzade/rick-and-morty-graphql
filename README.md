@@ -8,6 +8,7 @@
 - **BLoC Pattern**: State management is handled using the BLoC (Business Logic Component) pattern to manage states like loading, success, and error.
 - **Clean Architecture**: The app follows clean architecture principles with separation of concerns into layers: Data, Domain, and Presentation.
 - **Dependency Injection**: Uses `GetIt` for service and dependency injection to manage app dependencies and lifecycle.
+- **Unit Testing**: Includes unit tests to ensure the reliability of the BLoC and other layers of the application.
 
 ## Technologies Used
 
@@ -15,3 +16,4 @@
 - **GraphQL**: A query language for your API and runtime for executing queries with your existing data.
 - **BLoC Pattern**: A state management approach to separate business logic from UI code.
 - **GetIt**: A service locator for managing app dependencies and instances.
+- **Unit Testing**: Ensures the correctness of the app with test cases for BLoC and repository layers.
