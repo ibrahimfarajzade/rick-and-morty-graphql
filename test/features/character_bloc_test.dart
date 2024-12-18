@@ -7,7 +7,7 @@ import 'package:rick_and_morty_characters/features/characters/presentation/bloc/
 import 'package:rick_and_morty_characters/features/characters/presentation/bloc/character_event.dart';
 import 'package:rick_and_morty_characters/features/characters/presentation/bloc/character_state.dart';
 
-import 'core/mock_generator.mocks.dart';
+import '../core/mock_generator.mocks.dart';
 
 void main() {
   late MockGetCharacters mockGetCharacters;
